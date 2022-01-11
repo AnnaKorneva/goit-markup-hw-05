@@ -19,14 +19,14 @@
 
 <body>
     <header class="header">
-        <div class="container border navigation">
+        <div class="container navigation">
             <nav class="navigation">
                 <a href="./index.html" class="nav-link"> <span>Web</span>Studio</a>
 
 
                 <ul class="nav-menu list">
-                    <li class="nav-menu-item"><a class="link" href="./index.html">Студия</a></li>
-                    <li class="nav-menu-item"><a class="link" href="./portfolio.html">Портфолио</a></li>
+                    <li class="nav-menu-item"><a class="link active" href="./index.html">Студия</a></li>
+                    <li class="nav-menu-item"><a class="link " href="./portfolio.html">Портфолио</a></li>
                     <li class="nav-menu-item"><a class="link" href="">Контакты</a></li>
                 </ul>
             </nav>
@@ -54,9 +54,21 @@
         <section class="hero section">
 
             <h1 class="hero-title">Эффективные решения <br> для вашего бизнеса</h1>
-            <button class="button-main " type="button">Заказать услугу</button>
+            <button  data-modal-open class="button-main " type="button">Заказать услугу</button>
 
         </section>
+
+        <div class="backdrop is-hidden" data-modal>
+            <div class="modal">
+                <button data-modal-close type="button" class="close">
+            <svg class="close-icon" width=11px height=11px>
+                        <use href="./img/icons/symbol-defs2.svg#icon-close">
+
+                        </use>
+                    </svg>
+                </button>
+            </div>
+        </div>
 
         <section class="section main-features">
             <div class="container">
@@ -110,9 +122,27 @@
             <div class="container">
                 <h2 class="work-title title">Чем мы занимаемся</h2>
                 <ul class="work-list list">
-                    <li> <img src="./img/img.jpg" alt="планшет" width="370"></li>
-                    <li> <img src="./img/img-1.jpg" alt="телефон" width="370"></li>
-                    <li> <img src="./img/img-2.jpg" alt="цветовая гамма" width="370"></li>
+                    <li class="work-img"> 
+                        <div class="image-discription">
+                            <p class="work-text">Десктопные приложения</p>
+                        </div>
+                        <img src="./img/img.jpg" alt="планшет" width="370">
+                    
+                 </li>
+                    <li class="work-img"> 
+                        <div class="image-discription">
+                            <p class="work-text">Мобильные приложения</p>
+                        </div>
+                        <img src="./img/img-1.jpg" alt="телефон" width="370">
+                     
+                 </li>
+                    <li class="work-img">
+                        <div class="image-discription">
+                            <p class="work-text">Дизайнерские решения</p>
+                        </div>
+                         <img src="./img/img-2.jpg" alt="цветовая гамма" width="370">
+                   
+                     </li>
                 </ul>
             </div>
         </section>
@@ -362,7 +392,7 @@
 
     </footer>
 
-
+<script src="./js/modal.js"></script>
 </body>
 
 </html>
